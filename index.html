@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>امتحان أحياء - تالتة ثانوي-الباب الاول</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="user-info">
+  <h2>تسجيل الدخول للامتحان</h2>
+  <input type="text" id="student-name" placeholder=" اكتب اسمك ثلاثي" ><br><br>
+  <input type="text" id="student-phone" placeholder="رقم الهاتف"><br><br>
+  <button onclick="submitUserInfo()">متابعة</button>
+</div>
+
+    <div id="home">
+      <h1>امتحان أحياء - تالتة ثانوي - الدعامه</h1>
+      <p>اختر الوضع:</p>
+      <label><input type="radio" name="mode" value="practice" checked> تدريب</label>
+      <label><input type="radio" name="mode" value="exam"> امتحان</label>
+      <br><br>
+      <button onclick="startExam()">ابدأ الامتحان</button>
+    </div>
+
+    <div id="exam" class="hidden">
+      <h2>الأسئلة</h2>
+      <div id="timer"></div>
+      <div id="question-container"></div>
+      <button onclick="submitExam()">إنهاء الامتحان</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>النتيجة</h2>
+      <p id="score"></p>
+      <h3>مراجعة الأسئلة</h3>
+      <div id="review-container"></div>
+      <button onclick="restartExam()">إعادة المحاولة</button>
+    </div>
+  </div>
+
+
+  <div class="text">
+    <h4>كل غلطة هي درس جديد <span>' استمر '</span></h4>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('NYR1UQOFkV_2F6Uww');
+
+  window.sendEmailJS = (serviceID, templateID, templateParams) => {
+    return emailjs.send(serviceID, templateID, templateParams);
+  };
+</script>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

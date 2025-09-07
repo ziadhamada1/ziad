@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background: linear-gradient(to right, #061825 ,#07694c);
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #eaedf1;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+transition: .3s;
+}
+.container:hover{
+  box-shadow: 0 0 60px #ccc;
+}
+p{
+  font-size: 20px;
+color: #0077cc;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 20px;
+  background: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 20px;
+}
+button:hover {
+  background: #005fa3;
+  transform: scale(1.1);
+}
+
+.question, .review {
+  text-align: right;
+  margin: 15px 0;
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 5px;
+  color: #0C2D57;
+}
+
+.feedback {
+  font-weight: bold;
+}
+#home h1{
+  color: #0077cc;
+}
+#home label{
+   color: #0077cc;
+   font-size: 20px;
+}
+
+
+
+
+.text h4{
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 1px 10px #fff;
+}
+.text h4 span{
+  font-size: 30px;
+}
+#user-info h2{
+ color: #0077cc;
+   font-size: 30px;  
+}
+#user-info input{
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  outline:#0077cc ;
+  color: #0077cc;
+  font-size: 18px;
+
+}
+::placeholder{
+  font-size: 18px;
+  color: #0077cc;
+
+}
